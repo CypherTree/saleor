@@ -96,7 +96,7 @@ def test_voucher_queryset_active(voucher):
         ([10, 10, 10], 5, DiscountValueType.FIXED, False, 15),
     ],
 )
-def test_products_voucher_checkout_discount_not(
+def test_specific_products_voucher_checkout_discount(
     monkeypatch,
     prices,
     discount_value,
@@ -107,14 +107,14 @@ def test_products_voucher_checkout_discount_not(
 ):
     discounts = []
     monkeypatch.setattr(
-        "saleor.checkout.utils.get_prices_of_discounted_products",
+        "saleor.checkout.utils.get_prices_of_discounted_specific_product",
         lambda lines, discounts, discounted_products: (
             Money(price, "USD") for price in prices
         ),
     )
     voucher = Voucher(
         code="unique",
-        type=VoucherType.PRODUCT,
+        type=VoucherType.SPECIFIC_PRODUCT,
         discount_value_type=discount_type,
         discount_value=discount_value,
         apply_once_per_order=apply_once_per_order,

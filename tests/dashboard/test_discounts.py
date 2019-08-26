@@ -199,7 +199,7 @@ def test_product_voucher_checkout_discount_raises_not_applicable(
     discounted_product = product_with_images
     voucher = Voucher(
         code="unique",
-        type=VoucherType.PRODUCT,
+        type=VoucherType.SPECIFIC_PRODUCT,
         discount_value_type=DiscountValueType.FIXED,
         discount_value=10,
     )
@@ -216,7 +216,7 @@ def test_category_voucher_checkout_discount_raises_not_applicable(order_with_lin
     discounted_collection = Collection.objects.create(name="Discounted", slug="discou")
     voucher = Voucher(
         code="unique",
-        type=VoucherType.COLLECTION,
+        type=VoucherType.SPECIFIC_PRODUCT,
         discount_value_type=DiscountValueType.FIXED,
         discount_value=10,
     )
@@ -243,7 +243,7 @@ def test_ajax_voucher_list(admin_client, voucher):
 
 
 @pytest.mark.parametrize(
-    "voucher_type", ["collection", "category", "product", "entire_order", "shipping"]
+    "voucher_type", ["specific_product", "entire_order", "shipping"]
 )
 def test_voucher_form_min_amount_spent_is_changed_on_edit(
     admin_client, product, collection, voucher_type
