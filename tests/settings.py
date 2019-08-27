@@ -4,9 +4,12 @@ from saleor.settings import *  # noqa
 
 CELERY_TASK_ALWAYS_EAGER = True
 
-SECRET_KEY = "NOTREALLY"
+SECRET_KEY = "+)(e#zz^oqaa-0svss8^)qx=)-p-0t5f@&0)odfo5i7@oyet@k"
 
-ALLOWED_STOREFRONT_HOSTS = ["www.example.com"]
+ALLOWED_STOREFRONT_HOSTS = []
+
+#Uncomment the default one
+#ALLOWED_STOREFRONT_HOSTS = ["www.example.com"]
 
 DEFAULT_CURRENCY = "USD"
 
