@@ -33,7 +33,7 @@ dist/
 /node_modules/
 /static/
 /saleor/static/assets/
-webpack-bundle.json
+#webpack-bundle.json
 /templates/templated_email/compiled/*
 !/templates/templated_email/compiled/.gitkeep
 
