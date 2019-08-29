@@ -32,6 +32,7 @@ non_translatable_urlpatterns = [
         name="django.contrib.sitemaps.views.sitemap",
     ),
     url(r"^i18n/$", set_language, name="set_language"),
+    
     url("", include("social_django.urls", namespace="social")),
 ]
 

@@ -422,6 +422,7 @@ type Category implements Node {
   description: String!
   descriptionJson: JSONString!
   parent: Category
+  testCustomField: String!      #Add custom field
   level: Int!
   privateMeta: [MetaStore]!
   meta: [MetaStore]!
@@ -477,6 +478,7 @@ input CategoryInput {
   seo: SeoInput
   backgroundImage: Upload
   backgroundImageAlt: String
+  testCustomField: String     #Add custom field
 }
 
 type CategoryTranslate {

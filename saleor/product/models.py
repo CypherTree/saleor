@@ -69,6 +69,8 @@ class Category(MPTTModel, ModelWithMetadata, SeoModel):
     slug = models.SlugField(max_length=128)
     description = models.TextField(blank=True)
     description_json = JSONField(blank=True, default=dict)
+    custom_field = models.TextField(blank=True, default="Custom field")
+
     parent = models.ForeignKey(
         "self", null=True, blank=True, related_name="children", on_delete=models.CASCADE
     )

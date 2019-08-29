@@ -28,8 +28,8 @@ class CategoryForm(forms.ModelForm):
             "description": pgettext_lazy("Description", "Description"),
             "background_image": pgettext_lazy("Category form", "Background Image"),
             "background_image_alt": pgettext_lazy(
-                "Description of a category image", "Image description"
-            ),
+                "Description of a category image", "Image description"),
+            "custom_field": pgettext_lazy("Custom field", "Custom field"),
         }
 
     def save(self, commit=True):
