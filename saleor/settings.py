@@ -147,10 +147,12 @@ MEDIA_URL = os.environ.get("MEDIA_URL", "/media/")
 STATIC_ROOT = os.path.join(PROJECT_ROOT, "static")
 STATIC_URL = os.environ.get("STATIC_URL", "/static/")
 STATICFILES_DIRS = [
+    ("custom", os.path.join(PROJECT_ROOT, "saleor", "static", "custom")),
     ("assets", os.path.join(PROJECT_ROOT, "saleor", "static", "assets")),
     ("favicons", os.path.join(PROJECT_ROOT, "saleor", "static", "favicons")),
     ("images", os.path.join(PROJECT_ROOT, "saleor", "static", "images")),
     (
+        #"custom",
         "dashboard/images",
         os.path.join(PROJECT_ROOT, "saleor", "static", "dashboard", "images"),
     ),

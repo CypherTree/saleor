@@ -68,10 +68,11 @@
                 <svg data-src="{% static "dashboard/images/mobile-menu.svg" %}" width="24" height="24" />
               </a>
             </li>
-            <li>
-              <a href="{% url 'dashboard:index' %}" class="logo">
+            <li style="padding-top:15px">
+              <!--<a href="{% url 'dashboard:index' %}" class="logo">
                 <svg data-src="{% static "images/logo-white.svg" %}" height="38px" width="176px" />
-              </a>
+              </a>-->
+              <img src="{% static 'custom/cyphertree-logo.png' %}" width="28" height="33"/>
             </li>
             <li class="search">
               {% if SEARCH_IS_ENABLED %}

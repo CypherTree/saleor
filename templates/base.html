@@ -118,10 +118,11 @@
             <div class="menu-icon-mobile d-md-none navbar__brand__menu-toggle closed open">
               <svg data-src="{% static "images/mobile-menu.svg" %}" width="28px" height="20px"/>
             </div>
-            <!--<a href="{% url 'home' %}">
-              <svg data-src="{% static "images/logo-light.svg" %}"/>
-            </a>-->
-            <div> Cyphertree Technologies Pvt Ltd </div>
+            <a href="{% url 'home' %}">
+              <img src="{% static 'custom/cyphertree-logo.png' %}" width="49" height="59"/>
+            </a>
+            {% comment %} <div> Cyphertree Technologies Pvt Ltd </div> {% endcomment %}
+            <!--<svg data-src="{% static 'dashboard/images/cyphertree-logo.svg' %}"/>-->
           </div>
           <div class="col-2 col-md-5 navbar__search static">
             {% if SEARCH_IS_ENABLED %}
