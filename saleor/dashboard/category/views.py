@@ -49,6 +49,7 @@ def category_create(request, root_pk=None):
             return redirect("dashboard:category-details", pk=root_pk)
         return redirect("dashboard:category-list")
     ctx = {"category": category, "form": form, "path": path}
+    print(category.testCustomField)
     return TemplateResponse(request, "dashboard/category/form.html", ctx)
 
 

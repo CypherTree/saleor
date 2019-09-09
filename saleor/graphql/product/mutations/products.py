@@ -54,7 +54,7 @@ class CategoryInput(graphene.InputObjectType):
     seo = SeoInput(description="Search engine optimization fields.")
     background_image = Upload(description="Background image file.")
     background_image_alt = graphene.String(description="Alt text for an image.")
-
+    testCustomField = graphene.String(description="Add this custom field") #Add custom field
 
 class CategoryCreate(ModelMutation):
     class Arguments:
@@ -142,7 +142,6 @@ class CollectionInput(graphene.InputObjectType):
     background_image_alt = graphene.String(description="Alt text for an image.")
     seo = SeoInput(description="Search engine optimization fields.")
     publication_date = graphene.Date(description="Publication date. ISO 8601 standard.")
-
 
 class CollectionCreateInput(CollectionInput):
     products = graphene.List(
