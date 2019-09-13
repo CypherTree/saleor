@@ -53,7 +53,10 @@
       <div class=" d-none d-md-block container">
       <div class="row">
         <div class="col-6">
-          <p class="text-left">{{ site.settings.translated.header_text }}</p>
+          {% comment %} You can change header text from here
+            <p class="text-left">Our sample ecommerce</p> 
+          {% endcomment %}
+          <p class="text-left">{{ site.settings.translated.header_text }}</p> 
         </div>
         <div class="col-6">
           <ul class="float-right">

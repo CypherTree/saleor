@@ -1,0 +1,5 @@
+- Gather requirements
+- Decide what makes a MVP(minimum viable product)
+- make a ticket(github issue)
+- make that poc work in a set time(6-8 hrs)
+- at this design phase, show it to the stakeholders - get feedback(very important)

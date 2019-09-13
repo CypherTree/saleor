@@ -235,6 +235,7 @@ INSTALLED_APPS = [
     "django.contrib.staticfiles",
     "django.contrib.auth",
     "django.contrib.postgres",
+    "django_extensions",
     "django.forms",
     # Local apps
     "saleor.extensions",
